@@ -8,8 +8,8 @@ export OMP_PROC_BIND=spread
 #add this line if having issues with locks
 export HDF5_USE_FILE_LOCKING='FALSE'
 
-#pick GPU
-export CUDA_VISIBLE_DEVICES=0
+#pick available GPU's
+export CUDA_VISIBLE_DEVICES=0,1,2,3
 
 #directories and files
 datadir=/bigdata/segm_h5_v3_new_split
