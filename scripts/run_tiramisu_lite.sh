@@ -8,7 +8,7 @@ export OMP_PROC_BIND=spread
 # By default, for Open MPI 4.0 and later, infiniband ports on a device
 # are not used by default.
 # export OMPI_MCA_btl_openib_if_include="mlx5_0:1" 
-
+export OMPI_MCA_btl=^openib
 #add this line if having issues with locks
 export HDF5_USE_FILE_LOCKING='FALSE'
 
