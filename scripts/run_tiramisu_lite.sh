@@ -7,13 +7,13 @@ export OMP_PROC_BIND=spread
 
 # By default, for Open MPI 4.0 and later, infiniband ports on a device
 # are not used by default.
-export OMPI_MCA_btl_openib_if_include="mlx5_0:1" 
+# export OMPI_MCA_btl_openib_if_include="mlx5_0:1" 
 
 #add this line if having issues with locks
 export HDF5_USE_FILE_LOCKING='FALSE'
 
 #pick available GPU's
-export CUDA_VISIBLE_DEVICES=0
+export CUDA_VISIBLE_DEVICES=0,1,2,3
 
 #directories and files
 datadir=/bigdata/segm_h5_v3_new_split
