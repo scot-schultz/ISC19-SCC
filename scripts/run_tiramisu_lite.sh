@@ -5,12 +5,15 @@ export OMP_NUM_THREADS=6
 export OMP_PLACES=threads
 export OMP_PROC_BIND=spread
 
+#add this line if having issues with locks
+export HDF5_USE_FILE_LOCKING='FALSE'
+
 #pick GPU
 export CUDA_VISIBLE_DEVICES=0
 
 #directories and files
-datadir=/mnt/data
-scratchdir=/mnt/data
+datadir=/bigdata/segm_h5_v3_new_split
+scratchdir=/bigdata/segm_h5_v3_new_split
 numfiles_train=1500
 numfiles_validation=300
 numfiles_test=500
@@ -22,7 +25,7 @@ batch=8
 blocks="3 3 4 4 7 7"
 
 #create run dir
-run_dir=/mnt/runs/tiramisu/run_ngpus1
+run_dir=/bigdata/runs/tiramisu/run_ngpus1
 #rundir=${WORK}/data/tiramisu/runs/run_nnodes16_j6415751
 mkdir -p ${run_dir}
 
