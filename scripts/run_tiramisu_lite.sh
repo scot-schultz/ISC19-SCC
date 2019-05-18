@@ -25,7 +25,7 @@ numfiles_test=500
 
 #network parameters
 downsampling=4
-batch=2
+batch=8
 #blocks="2 2 2 4 5"
 blocks="3 3 4 4 7 7"
 
