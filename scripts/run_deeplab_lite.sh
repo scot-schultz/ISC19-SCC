@@ -6,7 +6,7 @@ export OMP_PLACES=threads
 export OMP_PROC_BIND=spread
 
 #pick GPU: remove for multi-gpu
-export CUDA_VISIBLE_DEVICES=0
+#export CUDA_VISIBLE_DEVICES=0
 
 #directories
 datadir=/bigdata/segm_h5_v3_new_split
