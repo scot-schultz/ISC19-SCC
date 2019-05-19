@@ -9,8 +9,8 @@ export OMP_PROC_BIND=spread
 export CUDA_VISIBLE_DEVICES=0
 
 #directories
-datadir=/mnt/data
-scratchdir=/mnt/data
+datadir=/bigdata/segm_h5_v3_new_split
+scratchdir=/bigdata/segm_h5_v3_new_split
 numfiles_train=1500
 numfiles_validation=300
 numfiles_test=500
@@ -18,7 +18,7 @@ downsampling=4
 batch=8
 
 #create run dir
-run_dir=/mnt/runs/deeplab/run_ngpus1
+run_dir=/bigdata/runs/deeplab/run_ngpus1
 #rundir=${WORK}/data/tiramisu/runs/run_nnodes16_j6415751
 mkdir -p ${run_dir}
 
