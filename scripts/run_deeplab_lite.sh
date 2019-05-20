@@ -8,6 +8,9 @@ export OMP_PROC_BIND=spread
 #pick GPU: remove for multi-gpu
 #export CUDA_VISIBLE_DEVICES=0
 
+#add this line if having issues with locks
+export HDF5_USE_FILE_LOCKING='FALSE'
+
 #directories
 datadir=/bigdata/segm_h5_v3_new_split
 scratchdir=/bigdata/segm_h5_v3_new_split
