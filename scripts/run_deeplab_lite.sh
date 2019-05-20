@@ -49,7 +49,7 @@ if [ ${train} -eq 1 ]; then
       runid=$(echo ${runfiles} | awk '{split($1,a,"run"); print a[1]+1}')
   fi
     
-  python3 -u ./deeplab-tf-train.py     --datadir_train ${scratchdir}/train \
+  python -u ./deeplab-tf-train.py      --datadir_train ${scratchdir}/train \
                                        --train_size ${numfiles_train} \
                                        --datadir_validation ${scratchdir}/validation \
                                        --validation_size ${numfiles_validation} \
@@ -80,7 +80,7 @@ if [ ${test} -eq 1 ]; then
       runid=$(echo ${runfiles} | awk '{split($1,a,"run"); print a[1]+1}')
   fi
     
-  python3 -u ./deeplab-tf-inference.py     --datadir_test ${scratchdir}/test \
+  python -u ./deeplab-tf-inference.py      --datadir_test ${scratchdir}/test \
                                            --test_size ${numfiles_test} \
                                            --downsampling ${downsampling} \
 					   --downsampling_mode "center-crop" \
