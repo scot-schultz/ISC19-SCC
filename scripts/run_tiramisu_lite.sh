@@ -58,7 +58,7 @@ if [ ${train} -eq 1 ]; then
       runid=$(echo ${runfiles} | awk '{split($1,a,"run"); print a[1]+1}')
   fi
     
-  python -u ./tiramisu-tf-train.py      --datadir_train ${scratchdir}/train \
+  python3 -u ./tiramisu-tf-train.py      --datadir_train ${scratchdir}/train \
                                         --train_size ${numfiles_train} \
                                         --datadir_validation ${scratchdir}/validation \
                                         --validation_size ${numfiles_validation} \
@@ -89,7 +89,7 @@ if [ ${test} -eq 1 ]; then
       runid=$(echo ${runfiles} | awk '{split($1,a,"run"); print a[1]+1}')
   fi
     
-  python -u ./tiramisu-tf-inference.py     --datadir_test ${scratchdir}/test \
+  python3 -u ./tiramisu-tf-inference.py     --datadir_test ${scratchdir}/test \
                                            --test_size ${numfiles_test} \
                                            --downsampling ${downsampling} \
                                            --downsampling_mode "center-crop" \
